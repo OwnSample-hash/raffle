@@ -1,0 +1,4 @@
+*.smx
+cs_server
+include
+sourcemod-1.11.0-git6934-linux
