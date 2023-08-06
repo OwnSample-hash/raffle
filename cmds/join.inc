@@ -1,4 +1,8 @@
 Action CmdJoin(int client, int argc){
+	if(!sm_dc_is_live.BoolValue){
+		PrintToChat(client, "Sorry there is no raffle being held!");
+		return Plugin_Handled;
+	}
 	char code[17];
 	char[] chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_";
 	for (int i = 0; i < 16;i++){
@@ -34,6 +38,7 @@ Action CmdJoin(int client, int argc){
 	PrintToBoth(client, "Use this id in the dc comamnd /raffle while joinning: ");
 	PrintToBoth(client, "%s:%d", code, strlen(code));
 	PrintToBoth(client, "You can use console to copy the code!");
+	PrintToBoth(client, "ALSO DO NOT SHARE YOUR CODE WITH ANY ONE AS IS IT IS BOUND TO YOUR ACCOUNT! (SO THEY CAN SPEND YOUR MONEY!)");
 	PrintToBoth(client, "Once we have confirmed your registration you'll be notified!");
 	PrintToBoth(client, "------------------------------------------------------");
 	for (new i;i<2;i++) {PrintToChat(client, "\n");PrintToConsole(client, "\n");}

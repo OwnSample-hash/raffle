@@ -3,6 +3,7 @@ Handle timer;
 ConVar sm_dc_event_price;
 ConVar sm_dc_event_db;
 ConVar sm_dc_timer_time;
+ConVar sm_dc_is_live;
 
 public Plugin myinfo = {
     name="Dc raffle shitfest!",

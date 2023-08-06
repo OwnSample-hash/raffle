@@ -11,6 +11,7 @@
 #include <utils/timer>
 
 #include <cmds/cre_table>
+#include <cmds/choose_winner>
 #include <cmds/dc_join>
 #include <cmds/join>
 
@@ -18,6 +19,7 @@ public void OnPluginStart() {
 	RegConsoleCmd("sm_join", CmdJoin, "Joins the raffle on dc!");
 	RegServerCmd("sm_dc_join", CmdDcJoin);
 	RegServerCmd("sm_dc_cre_table", CmdCreateTbl);
+	RegServerCmd("sm_dc_choose_w", CmdChooseWiner);
 
 	init_Cvar();
 
