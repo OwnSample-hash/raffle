@@ -8,6 +8,6 @@ public Plugin myinfo = {
     name="Dc raffle shitfest!",
     author="os",
     description="Idk mate this shit is the hackiest way of doing things",
-    version="0.69-final-beta-rc-early_access",
+    version="0.69-final-beta-rc-early_access-alpha",
     url=""
 };

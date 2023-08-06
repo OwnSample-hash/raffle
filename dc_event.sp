@@ -5,6 +5,7 @@
 
 #include <utils/authid2clientid>
 #include <utils/cvar>
+#include <utils/fatal>
 #include <utils/print_to_both>
 #include <utils/take_mooner>
 #include <utils/timer>
@@ -23,7 +24,7 @@ public void OnPluginStart() {
 	char ebuffer[1024], db_name[256];
 	GetConVarString(sm_dc_event_db, db_name, 256);
 	db = SQL_Connect(db_name, true, ebuffer, 1024);
-	db == null ? LogError(ebuffer) : LogMessage("Connected to db: %s", db_name);
+	db == null ? fatal(ebuffer) : LogMessage("Connected to db: %s", db_name);
 
 	timer = CreateTimer(sm_dc_timer_time.FloatValue, TimerCheckCompleted, 0, TIMER_REPEAT);
 	timer == INVALID_HANDLE ? LogError("Failed to create timer!!") : LogMessage("Created timer!");
