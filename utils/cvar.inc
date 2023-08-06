@@ -13,15 +13,15 @@ void init_Cvar(){
 
     char buffer[1024];
     sm_dc_event_price.GetString(buffer, 1024);
-    PrintToServer("Value of sm_dc_event_price:%s", buffer);
+    LogMessage("Value of sm_dc_event_price:%s", buffer);
     
     for (new i;i<1023;i++) buffer[i] = 0;
     sm_dc_event_db.GetString(buffer, 1024);
-    PrintToServer("Value of sm_dc_event_db:%s", buffer);
+    LogMessage("Value of sm_dc_event_db:%s", buffer);
     
     for (new i;i<1023;i++) buffer[i] = 0;
     sm_dc_timer_time.GetString(buffer, 1024);
-    PrintToServer("Value of sm_dc_timer_time:%s", buffer);
+    LogMessage("Value of sm_dc_timer_time:%s", buffer);
 
     sm_dc_event_price.AddChangeHook(Cvar_dc_event_price);
     sm_dc_event_db.AddChangeHook(Cvar_dc_event_db);
