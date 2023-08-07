@@ -1,3 +1,8 @@
+#if defined __auth_id_client_id0
+#endinput
+#endif
+#define __auth_id_client_id0
+
 /*
 	@param authid The auth2id of a client
 	@param authtype The auth id type default AuthId_Steam2

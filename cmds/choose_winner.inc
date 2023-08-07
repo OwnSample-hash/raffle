@@ -1,3 +1,8 @@
+#if defined __chose__winer
+#endinput
+#endif
+#define __chose__winer
+
 Action CmdChooseWiner (int argc) {
     char[] query = "SELECT raffle.steam2id FROM raffle ORDER BY RAND() * raffle.tickets DESC LIMIT 1;"
     DBResultSet res = SQL_Query(db, query);

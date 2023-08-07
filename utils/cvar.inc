@@ -1,3 +1,8 @@
+#if defined __cvar
+#endinput
+#endif
+#define __cvar
+
 void init_Cvar(){
     sm_dc_event_price = FindConVar("sm_dc_event_price");
     if (sm_dc_event_price == null)

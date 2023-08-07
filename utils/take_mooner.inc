@@ -1,3 +1,8 @@
+#if defined __take_mooner
+#endinput
+#endif
+#define __take_mooner
+
 enum TakeMoonerStatus {
 	TMS_SUC = 0, // success
 	TMS_NEG, // Negative cre

@@ -1,3 +1,8 @@
+#if defined __join
+#endinput
+#endif
+#define __join
+
 Action CmdJoin(int client, int argc){
 	if(!sm_dc_is_live.BoolValue){
 		PrintToChat(client, "Sorry there is no raffle being held!");

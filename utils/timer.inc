@@ -1,3 +1,8 @@
+#if defined __timer
+#endinput
+#endif
+#define __timer
+
 Action TimerCheckCompleted(Handle timer_){
 	char[] query = "SELECT raffle.steam2id FROM raffle WHERE raffle.notified IS NULL;";
 	char[] query_fmt = "UPDATE raffle SET raffle.notified = %d WHERE raffle.steam2id = \"%s\";";

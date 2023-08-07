@@ -1,3 +1,8 @@
+#if defined __fast_query
+#endinput
+#endif
+#define __fast_query
+
 /*
 @param db_ The database connection use to execute the query
 @param query The query it self

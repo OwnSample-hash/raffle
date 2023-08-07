@@ -1,3 +1,8 @@
+#if defined __dc_join
+#endinput
+#endif
+#define __dc_join
+
 Action CmdDcJoin(int argc){
 	if (argc < 3) {
 		LogError("Not enough args");
@@ -14,7 +19,6 @@ Action CmdDcJoin(int argc){
 	char query[1024];
 	Format(query, 1024, fmt, tickets, timestamp, id);
 	switch (TakeMooner(StringToInt(tickets), id)){
-		case TMS_SUC: {}
 		case TMS_SQL_HAN: {return Plugin_Stop;}
 		case TMS_NEG: {return Plugin_Stop;}
 		case TMS_SQL_ERR: {

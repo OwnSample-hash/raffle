@@ -1,3 +1,8 @@
+#if defined __globals
+#endinput
+#endif
+#define __globals
+
 Database db;
 Handle timer;
 ConVar sm_dc_event_price;
