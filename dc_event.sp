@@ -10,9 +10,9 @@
 #include <utils/take_mooner>
 #include <utils/timer>
 
-#include <cmds/cre_table>
-#include <cmds/choose_winner>
 #include <cmds/dc_join>
+#include <cmds/choose_winner>
+#include <cmds/cre_table>
 #include <cmds/join>
 
 public void OnPluginStart() {

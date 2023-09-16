@@ -11,7 +11,7 @@ enum TakeMoonerStatus {
 }
 
 TakeMoonerStatus TakeMooner(const int tickets, const char[] ticketid){
-	char[] query_pre = "SELECT store_players.credits FROM raffle INNER JOIN store_players ON raffle.steam2id = \"STEAM_1:\" + store_players.authid WHERE raffle.raffleid = 2\"%s\";";
+	char[] query_pre = "SELECT store_players.credits FROM raffle INNER JOIN store_players ON raffle.steam2id = \"STEAM_1:\" + store_players.authid WHERE raffle.raffleid = \"%s\";";
 	char[] query_fmt = "UPDATE store_players, raffle SET store_players.credits = store_players.credits - (%d * %d) WHERE raffle.steam2id = (SELECT raffle.steam2id  FROM raffle WHERE raffle.raffleid = \"%s\");";
 	char query[1024];
 	Format(query, 1024, query_pre, ticketid);
@@ -25,7 +25,6 @@ TakeMoonerStatus TakeMooner(const int tickets, const char[] ticketid){
 	if (SQL_FetchRow(rs)){
 		int cre = rs.FetchInt(0);
 		if ((cre - (tickets*sm_dc_event_price.IntValue)) < 0) {
-			PrintToServer("Negative");
 			return TMS_NEG;
 		}
 	} else {

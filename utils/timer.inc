@@ -23,7 +23,7 @@ Action TimerCheckCompleted(Handle timer_){
 			if (!fast_query(db, query_u)){
 				return Plugin_Stop;
 			}
-			PrintToBoth(client, "We have confirmed your raffel join! Good luck!");
+			KickClient(client, "We have confirmed your raffle join! Good luck!");
 		}
 	delete res;
 	return Plugin_Handled;

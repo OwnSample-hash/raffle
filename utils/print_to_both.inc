@@ -8,5 +8,5 @@ void PrintToBoth(int client, const char[] msg, any ...){
 	VFormat(buffer, sizeof(buffer), msg, 3);
 	PrintToChat(client, "%s", buffer);
 	PrintToConsole(client, "%s", buffer);
-	PrintToServer("client[%d]:%s", client, buffer);
+	//PrintToServer("client[%d]:%s", client, buffer);
 }

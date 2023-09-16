@@ -43,7 +43,7 @@ Action CmdJoin(int client, int argc){
 	PrintToBoth(client, "------------------------------------------------------");
 	PrintToBoth(client, "Use this id in the dc comamnd /raffle while joinning: ");
 	PrintToBoth(client, "%s:%d", code, strlen(code));
-	PrintToBoth(client, "You can use console to copy the code!");
+	PrintToBoth(client, "You can use the console to copy the code!");
 	PrintToBoth(client, "ALSO DO NOT SHARE YOUR CODE WITH ANY ONE AS IS IT IS BOUND TO YOUR ACCOUNT! (SO THEY CAN SPEND YOUR MONEY!)");
 	PrintToBoth(client, "ALSO REMEMBER THE CODE FOR LATER, IF YOU DECIDE TO CHANGE THE AMOUNT OF TICKETS YOU BOUGHT REMEMBER THAT YOU WON'T GET A REFUND!");
 	PrintToBoth(client, "The price of one ticket is: %d", sm_dc_event_price.IntValue);
